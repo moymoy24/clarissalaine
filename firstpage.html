@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For You ❤️</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            font-family: Arial, sans-serif;
+            background: pink;
+        }
+
+        .slideshow-container {
+            position: relative;
+            width: 80vw;  /* Width of slideshow */
+            height: 80vh; /* Height of slideshow, adjust as needed */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden; /* Ensures nothing overflows */
+            margin: auto; /* Centers the slideshow in the middle */
+        }
+
+        .slide {
+            position: absolute;
+            width: auto;
+            height: 100%;
+            max-width: 100%;
+            object-fit: contain; /* Keeps image's aspect ratio and ensures it fits within container */
+            border-radius: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+
+        .slide.active {
+            opacity: 1;
+        }
+
+        .btn {
+            position: absolute;
+            bottom: 50px;
+            background: red;
+            color: white;
+            padding: 15px 30px;
+            font-size: 18px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: darkred;
+        }
+    </style>
+</head>
+<body>
+    <div class="slideshow-container">
+        <img src="pictures/pic1.jpg" class="slide active">
+        <img src="pictures/pic2.jpg" class="slide">
+        <img src="pictures/pic3.jpg" class="slide">
+        <img src="pictures/pic4.jpg" class="slide">
+        <a href="secondpage.html" class="btn">Tap to Continue ❤️</a>
+    </div>
+
+    <script>
+        let slides = document.querySelectorAll(".slide");
+        let index = 0;
+
+        function changeSlide() {
+            slides[index].classList.remove("active");
+            index = (index + 1) % slides.length;
+            slides[index].classList.add("active");
+        }
+
+        setInterval(changeSlide, 3000); // Change every 3 seconds
+    </script>
+</body>
+</html>

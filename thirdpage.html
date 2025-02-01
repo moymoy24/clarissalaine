@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Be My Valentine</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            background-color: #f8b0cd; /* Pink background */
+            text-align: center;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        h1 {
+            color: #f96b8b;
+            font-size: 50px;
+            margin-top: 20px;
+        }
+
+        /* Adjusted Video Styling */
+        video {
+            width: 80%;  /* Make the video take up 100% of the width */
+            height: 80%;  /* Maintain the aspect ratio */
+            max-width: 50%; /* Set max width to avoid overflow */
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        audio {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Yay! ❤️ Thank You!</h1>
+
+    <!-- Video Element without controls and audio -->
+    <video autoplay muted loop>
+        <source src="video/476084922_9175931122472319_4923294208418194453_n.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <!-- Background Music with Controls -->
+    <audio autoplay loop controls>
+        <source src="Music/crybaby.mp3" type="audio/mp3">
+        Your browser does not support the audio tag.
+    </audio>
+
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Be My Valentine?</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: pink;
+            text-align: center;
+            margin: 0;
+        }
+
+        .heart-button {
+            position: relative;
+            width: 100px;
+            height: 100px;
+            margin-top: 10px;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+        }
+
+        .heart-button:before, .heart-button:after {
+            position: absolute; 
+    content: ""; 
+    left: 50px; 
+    top: 0; 
+    width: 52px; 
+    height: 80px; 
+    background: red; /* assign a nice red color */
+    border-radius: 50px 50px 0 0; /* make the top edge round */ 
+        }
+
+        
+
+        .heart-button:before {
+            -webkit-transform: rotate(-45deg); /* 45 degrees rotation counter clockwise */
+       -moz-transform: rotate(-45deg); 
+        -ms-transform: rotate(-45deg); 
+         -o-transform: rotate(-45deg); 
+            transform: rotate(-45deg); 
+    -webkit-transform-origin: 0 100%; /* Rotate it around the bottom-left corner */
+       -moz-transform-origin: 0 100%; 
+        -ms-transform-origin: 0 100%; 
+         -o-transform-origin: 0 100%; 
+            transform-origin: 0 100%;
+        }
+
+        .heart-button:after {
+            left: 0; /* placing the right part properly */
+    -webkit-transform: rotate(45deg); /* rotating 45 degrees clockwise */
+       -moz-transform: rotate(45deg); 
+        -ms-transform: rotate(45deg); 
+         -o-transform: rotate(45deg); 
+            transform: rotate(45deg); 
+    -webkit-transform-origin: 100% 100%; /* rotation is around bottom-right corner this time */
+       -moz-transform-origin: 100% 100%; 
+        -ms-transform-origin: 100% 100%; 
+         -o-transform-origin: 100% 100%; 
+            transform-origin :100% 100%; 
+        }
+
+        .heart-button:hover {
+            transform: scale(1.1) rotate(-45deg);
+        }
+
+        .heart-button span {
+            position: relative;
+            z-index: 1;
+            color: white; /* Make the text color visible */
+            font-size: 12px; /* Adjust text size */
+            font-weight: bold; /* Make text stand out */
+        }
+    </style>
+</head>
+<body>
+    <button class="heart-button" onclick="location.href='firstpage.html'"><span>Click</span></button>
+</body>
+</html>
