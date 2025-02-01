@@ -145,7 +145,7 @@
 
     <div class="buttons">
         <button id="yesBtn" onclick="sayYes()">Yes ❤️</button>
-        <button id="noBtn" onmouseover="moveNo(event)">No 😔</button>
+        <button id="noBtn" onmouseover="moveNo()">No 😔</button>
     </div>
 
     <script>
@@ -161,13 +161,14 @@
         }
 
         function sayYes() {
-            alert("Yay! ❤️ I love you!");
+            window.location.href = "thirdpage.html"; // Redirect to another page
         }
 
-        function moveNo(event) {
+        function moveNo() {
+            // Only move the "No" button on hover
             let x = Math.random() * (window.innerWidth - 100);
             let y = Math.random() * (window.innerHeight - 50);
-            document.getElementById("noBtn").style.position = "absolute"; // Make the button moveable
+            document.getElementById("noBtn").style.position = "absolute"; // Make the button movable
             document.getElementById("noBtn").style.left = x + "px";
             document.getElementById("noBtn").style.top = y + "px";
         }
